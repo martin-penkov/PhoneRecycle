@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакт - PhoneCycle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --dark-color: #333;
+            --light-color: #f4f4f4;
+            --text-color: #555;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--light-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--dark-color);
+            color: var(--light-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        header .logo i {
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: var(--light-color);
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFC107;
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1200x400/333333/ffffff?text=Contact+Us') no-repeat center center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .form-section {
+            padding: 60px 0;
+        }
+
+        .form-container {
+            background-color: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-container h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .radio-option {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .radio-option input[type="radio"] {
+            display: none;
+        }
+
+        .radio-option label {
+            background-color: #f0f0f0;
+            color: var(--dark-color);
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        }
+
+        .radio-option input[type="radio"]:checked + label {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #8BC34A;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            background: var(--dark-color);
+            color: var(--light-color);
+            padding: 40px 0 20px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: left;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 20px;
+        }
+
+        .footer-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .footer-section a {
+            color: var(--light-color);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #FFC107;
+        }
+
+        .social-media a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: var(--light-color);
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            .form-container {
+                padding: 20px;
+            }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-section {
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-bar">
+            <nav>
+                <div class="logo">
+                    <i class="fa-solid fa-recycle"></i>
+                    PhoneCycle
+                </div>
+                <ul>
+                    <li><a href="home.html">Начало</a></li>
+                    <li><a href="buy.html">Купи</a></li>
+                    <li><a href="sell.html">Продай</a></li>
+                    <li><a href="repair.html">Ремонт</a></li>
+                    <li><a href="additional-info.html">Допълнителна информация</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="contact.html">Контакт</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Свържете се с нас</h1>
+        </section>
+
+        <section class="form-section">
+            <div class="form-container">
+                <h2>Как можем да ви помогнем?</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Вашето име</label>
+                        <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Имейл адрес</label>
+                        <input type="email" id="email" name="email" placeholder="primeren@primer.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Модел на телефона (напр. iPhone 16, Samsung Galaxy S25)</label>
+                        <input type="text" id="phone" name="phone" placeholder="Модел на вашия телефон" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Относно какво е вашето запитване?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="sell" name="requestType" value="sell" required>
+                                <label for="sell"><i class="fa-solid fa-handshake"></i> Продажба на телефон</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="buy" name="requestType" value="buy">
+                                <label for="buy"><i class="fa-solid fa-cart-shopping"></i> Покупка на телефон</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="repair" name="requestType" value="repair">
+                                <label for="repair"><i class="fa-solid fa-screwdriver-wrench"></i> Ремонт на телефон</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="repair-description-group" class="form-group hidden">
+                        <label for="repairDescription">Опишете проблема</label>
+                        <textarea id="repairDescription" name="repairDescription" rows="4" placeholder="напр. 'Счупен екран на iPhone 13', 'Батерията не държи заряд'"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Изпрати запитване</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section contact-info">
+                <h4>Контакти</h4>
+                <p><i class="fa-solid fa-location-dot"></i>Левски, Варна 9000</p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="gmail.com@phonecycle.com">gmail@phonecycle.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+3594567890">0882734652</a></p>
+            </div>
+            <div class="footer-section quick-links">
+                <h4>Бързи връзки</h4>
+                <a href="buy.html">Купи телефон</a>
+                <a href="sell.html">Продайте вашия телефон</a>
+                <a href="repair.html">Услуги за ремонт</a>
+                <a href="about.html">За нас</a>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Последвайте ни</h4>
+                <a href="#" class="fa-brands fa-facebook-f"></a>
+                <a href="#" class="fa-brands fa-instagram"></a>
+                <a href="#" class="fa-brands fa-twitter"></a>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 PhoneCycle. Всички права запазени.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

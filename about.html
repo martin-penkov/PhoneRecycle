@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Научете повече за мисията на PhoneCycle за насърчаване на кръгова икономика за смартфони чрез рециклиране, обновяване и ремонт.">
+    <meta name="keywords" content="за нас, phonecycle, мисия, визия, устойчивост, екологични, кръгова икономика, рециклиране на телефони">
+    <meta name="author" content="Your Name">
+    <title>За нас - PhoneCycle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #8BC34A;
+            --accent-color: #FFC107;
+            --dark-color: #333;
+            --light-color: #f4f4f4;
+            --text-color: #555;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--light-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--dark-color);
+            color: var(--light-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo i {
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: var(--light-color);
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1200x400/333333/ffffff?text=Нашата+история') no-repeat center center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .content-section {
+            padding: 60px 0;
+        }
+        
+        .content-section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+        }
+
+        .text-block {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .mission-vision {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .mv-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .mv-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .mv-card h3 {
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .team-section {
+            background: var(--light-color);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+
+        .team-member h4 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        footer {
+            background: var(--dark-color);
+            color: var(--light-color);
+            padding: 40px 0 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: left;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 20px;
+        }
+
+        .footer-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .footer-section a {
+            color: var(--light-color);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-media a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: var(--light-color);
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-section {
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-bar">
+            <nav>
+                <div class="logo">
+                    <i class="fa-solid fa-recycle"></i>
+                    PhoneCycle
+                </div>
+                <ul>
+                    <li><a href="home.html">Начало</a></li>
+                    <li><a href="buy.html">Купи</a></li>
+                    <li><a href="sell.html">Продай</a></li>
+                    <li><a href="repair.html">Ремонт</a></li>
+                    <li><a href="additional-info.html">Допълнителна информация</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="contact.html">Контакт</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Нашата история</h1>
+        </section>
+
+        <section id="mission-vision" class="content-section container">
+            <div class="text-block">
+                <h2>Да направим технологиите устойчиви, един телефон наведнъж</h2>
+                <p>В PhoneCycle сме повече от просто бизнес — ние сме движение. Започнахме с проста идея: да се борим с нарастващия проблем с електронните отпадъци, като даваме на смартфоните втори, дори трети, шанс за живот. Вярваме, че технологиите трябва да бъдат достъпни, на разумна цена и най-важното, устойчиви.</p>
+            </div>
+            
+            <div class="mission-vision">
+                <div class="mv-card">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Нашата мисия</h3>
+                    <p>Да намалим електронните отпадъци и да насърчим кръгова икономика, като предоставим надеждна платформа за закупуване, продажба и ремонт на висококачествени, обновени смартфони.</p>
+                </div>
+                <div class="mv-card">
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>Нашата визия</h3>
+                    <p>Свят, в който всеки смартфон има цел след първия си собственик, минимизирайки въздействието върху околната среда и правейки технологиите по-достъпни за всички.</p>
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section id="our-process" class="content-section container">
+            <h2>Как го правим</h2>
+            <div class="text-block">
+                <p>Нашият процес е изграден върху доверие и прозрачност. Всяко устройство, което пристига при нас, преминава през строг процес на инспекция и обновяване. Гарантираме, че всеки телефон отговаря на нашите високи стандарти за качество и производителност, за да можете да купувате с увереност.</p>
+                <p>За ремонтите, нашите сертифицирани техници използват само висококачествени части, за да върнат живота на вашето устройство, спестявайки ви пари и предотвратявайки попадането му на сметището.</p>
+            </div>
+        </section>
+
+        ---
+
+        <section id="team" class="team-section content-section">
+            <div class="container">
+                <h2>Запознайте се с екипа</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="" alt="Петър Петров">
+                        <h4>Петър Петров</h4>
+                        <p>Основател и изпълнителен директор</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="" alt="Иван Иванов">
+                        <h4>Иван Иванов</h4>
+                        <p>Ръководител на отдела за обновяване</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="" alt="Мартин Пенков">
+                        <h4>Мартин Пенков</h4>
+                        <p>Мениджър връзки с клиенти</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section contact-info">
+                <h4>Контакти</h4>
+                <p><i class="fa-solid fa-location-dot"></i>Левски, Варна 9000</p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="gmail.com@phonecycle.com">gmail@phonecycle.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+3594567890">0882734652</a></p>
+            </div>
+            <div class="footer-section quick-links">
+                <h4>Бързи връзки</h4>
+                <a href="buy.html">Разгледайте телефони</a>
+                <a href="sell.html">Продайте телефона си</a>
+                <a href="repair.html">Ремонтни услуги</a>
+                <a href="about.html">За нас</a>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Последвайте ни</h4>
+                <a href="#" class="fa-brands fa-facebook-f"></a>
+                <a href="#" class="fa-brands fa-instagram"></a>
+                <a href="#" class="fa-brands fa-twitter"></a>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 PhoneCycle. Всички права запазени.</p>
+        </div>
+    </footer>
+</body>
+</html>
