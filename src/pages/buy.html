@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        function scrollRight() {
+        function scrollToRight() {
             const container = document.getElementById('phone-scroll-container');
             const cardWidth = document.querySelector('.phone-card').offsetWidth + 33;
             container.scrollBy({
@@ -17,7 +17,7 @@
             });
         }
 
-        function scrollLeft() {
+        function scrollToLeft() {
             const container = document.getElementById('phone-scroll-container');
             const cardWidth = document.querySelector('.phone-card').offsetWidth + 33;
             container.scrollBy({
@@ -73,6 +73,100 @@
                 </div>
             </div>
 
+            
+            <br>
+            <section class="phone-gallery-section">
+                <h2 class="text-center">Налични телефони за продажба</h2>
+                <div class="section-title-line"></div>
+                
+                <div class="phone-scroll-wrapper">
+                    <div class="phone-scroll-container" id="phone-scroll-container">
+                        <div class="phone-card">
+                            <img src="../static/15promax.png" alt="iPhone 15 Pro Max" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Apple iPhone 15 Pro Max</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition perfect">Перфектно</span></p>
+                                <p class="phone-description">Без никакви забележки по корпуса и дисплея. Батерия 95% здраве. Включен оригинален кабел за зареждане.</p>
+                                <p class="phone-price">Цена: <span class="price-value">1450 лв.</span></p>
+                                <a href="contact.html" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-card">
+                            <img src="../static/s25.png" alt="Samsung Galaxy S25" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Samsung Galaxy S25</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition very-good">Много добро</span></p>
+                                <p class="phone-description">Едва забележими драскотини по гърба. Дисплеят е перфектен. Батерия 95% здраве.</p>
+                                <p class="phone-price">Цена: <span class="price-value">980 лв.</span></p>
+                                <a href="contact.html" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-card">
+                            <img src="../static/pura80.png" alt="Huawei Pura 80 Ultra" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Huawei Pura 80 Ultra</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition good">Добро</span></p>
+                                <p class="phone-description">Няколко видими драскотини по екрана, които не влияят на работата. Отлично функционално състояние.</p>
+                                <p class="phone-price">Цена: <span class="price-value">950 лв.</span></p>
+                                <a href="contact.html" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-card">
+                            <img src="../static/12mini.png" alt="iPhone 12 mini" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Apple iPhone 12 mini</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition perfect">Перфектно</span></p>
+                                <p class="phone-description">Изглежда като нов, без следи от употреба. Батерия 98% здраве.</p>
+                                <p class="phone-price">Цена: <span class="price-value">800 лв.</span></p>
+                                <a href="contact.html" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-card">
+                            <img src="../static/a54.png" alt="Samsung Galaxy A54" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Samsung Galaxy A54</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition good">Добро</span></p>
+                                <p class="phone-description">Видими драскотини по гърба и рамката, но екранът е в добро състояние. Батерия 88% здраве.</p>
+                                <p class="phone-price">Цена: <span class="price-value">400 лв.</span></p>
+                                <a href="contact.html" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+
+                        <div class="phone-card">
+                            <img src="../static/iphone11.png" alt="iPhone 11" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Apple iPhone 11</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition very-good">Много добро</span></p>
+                                <p class="phone-description">Много леки следи от употреба, почти незабележими. Отлична батерия.</p>
+                                <p class="phone-price">Цена: <span class="price-value">650 лв.</span></p>
+                                <a href="contact.html" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+
+                        <div class="phone-card">
+                            <img src="../static/13proxiaomi.png" alt="Xiaomi 13 Pro" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Xiaomi 13 Pro</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition very-good">Много добро</span></p>
+                                <p class="phone-description">Много леки следи от употреба, почти незабележими. Отлична батерия.</p>
+                                <p class="phone-price">Цена: <span class="price-value">700 лв.</span></p>
+                                <a href="contact.html" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="text-center mt-6">
+                    <button onclick="scrollToLeft()" class="btn btn-scroll"><i class="fa-solid fa-arrow-left"></i> Назад</button>
+                    <button onclick="scrollToRight()" class="btn btn-scroll">Напред <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </section>
+
             <div class="pricing-section">
                 <h2>Как определяме цените?</h2>
                 <div class="section-title-line mx-auto"></div>
@@ -85,102 +179,6 @@
                 </ul>
                 <p class="mt-4">Всяка цена отразява качеството, което предлагаме, и усилията, които влагаме в обновяването на всяко устройство.</p>
             </div>
-            
-            <div class="text-center mt-10">
-                <a href="#" class="btn">Вижте наличните телефони</a>
-            </div>
-
-            <section class="phone-gallery-section">
-                <h2 class="text-center">Налични телефони за продажба</h2>
-                <div class="section-title-line"></div>
-                
-                <div class="phone-scroll-wrapper">
-                    <div class="phone-scroll-container" id="phone-scroll-container">
-                        <div class="phone-card">
-                            <img src="https://i.ibb.co/6y45sKq/iphone-13-pro-max.png" alt="iPhone 13 Pro Max" class="phone-img">
-                            <div class="phone-details">
-                                <h3 class="phone-name">Apple iPhone 13 Pro Max</h3>
-                                <p class="phone-condition-label">Състояние: <span class="phone-condition perfect">Перфектно</span></p>
-                                <p class="phone-description">Без никакви забележки по корпуса и дисплея. Батерия 95% здраве. Включен оригинален кабел за зареждане.</p>
-                                <p class="phone-price">Цена: <span class="price-value">1350 лв.</span></p>
-                                <a href="#" class="btn btn-buy">Купи</a>
-                            </div>
-                        </div>
-                        
-                        <div class="phone-card">
-                            <img src="https://i.ibb.co/hV757g9/samsung-galaxy-s22.png" alt="Samsung Galaxy S22" class="phone-img">
-                            <div class="phone-details">
-                                <h3 class="phone-name">Samsung Galaxy S22</h3>
-                                <p class="phone-condition-label">Състояние: <span class="phone-condition very-good">Много добро</span></p>
-                                <p class="phone-description">Едва забележими микро-драскотини по гърба. Дисплеят е перфектен. Батерия 90% здраве.</p>
-                                <p class="phone-price">Цена: <span class="price-value">980 лв.</span></p>
-                                <a href="#" class="btn btn-buy">Купи</a>
-                            </div>
-                        </div>
-                        
-                        <div class="phone-card">
-                            <img src="https://i.ibb.co/R2t9W1q/pixel-6a.png" alt="Google Pixel 6a" class="phone-img">
-                            <div class="phone-details">
-                                <h3 class="phone-name">Google Pixel 6a</h3>
-                                <p class="phone-condition-label">Състояние: <span class="phone-condition good">Добро</span></p>
-                                <p class="phone-description">Няколко видими драскотини по екрана, които не влияят на работата. Отлично функционално състояние.</p>
-                                <p class="phone-price">Цена: <span class="price-value">550 лв.</span></p>
-                                <a href="#" class="btn btn-buy">Купи</a>
-                            </div>
-                        </div>
-                        
-                        <div class="phone-card">
-                            <img src="https://i.ibb.co/WcM5t58/iphone-12-mini.png" alt="iPhone 12 mini" class="phone-img">
-                            <div class="phone-details">
-                                <h3 class="phone-name">Apple iPhone 12 mini</h3>
-                                <p class="phone-condition-label">Състояние: <span class="phone-condition perfect">Перфектно</span></p>
-                                <p class="phone-description">Изглежда като ново, без следи от употреба. Батерия 98% здраве.</p>
-                                <p class="phone-price">Цена: <span class="price-value">800 лв.</span></p>
-                                <a href="#" class="btn btn-buy">Купи</a>
-                            </div>
-                        </div>
-                        
-                        <div class="phone-card">
-                            <img src="https://i.ibb.co/K2tL3y8/samsung-galaxy-a53.png" alt="Samsung Galaxy A53" class="phone-img">
-                            <div class="phone-details">
-                                <h3 class="phone-name">Samsung Galaxy A53</h3>
-                                <p class="phone-condition-label">Състояние: <span class="phone-condition good">Добро</span></p>
-                                <p class="phone-description">Видими драскотини по гърба и рамката, но екранът е в добро състояние. Батерия 88% здраве.</p>
-                                <p class="phone-price">Цена: <span class="price-value">400 лв.</span></p>
-                                <a href="#" class="btn btn-buy">Купи</a>
-                            </div>
-                        </div>
-
-                        <div class="phone-card">
-                            <img src="https://i.ibb.co/x7R41m8/iphone-11-pro.png" alt="iPhone 11 Pro" class="phone-img">
-                            <div class="phone-details">
-                                <h3 class="phone-name">Apple iPhone 11 Pro</h3>
-                                <p class="phone-condition-label">Състояние: <span class="phone-condition very-good">Много добро</span></p>
-                                <p class="phone-description">Много леки следи от употреба, почти незабележими. Отлична батерия.</p>
-                                <p class="phone-price">Цена: <span class="price-value">750 лв.</span></p>
-                                <a href="#" class="btn btn-buy">Купи</a>
-                            </div>
-                        </div>
-
-                        <div class="phone-card">
-                            <img src="https://i.ibb.co/x7R41m8/iphone-11-pro.png" alt="iPhone 11 Pro" class="phone-img">
-                            <div class="phone-details">
-                                <h3 class="phone-name">Apple iPhone 11 Pro</h3>
-                                <p class="phone-condition-label">Състояние: <span class="phone-condition very-good">Много добро</span></p>
-                                <p class="phone-description">Много леки следи от употреба, почти незабележими. Отлична батерия.</p>
-                                <p class="phone-price">Цена: <span class="price-value">750 лв.</span></p>
-                                <a href="#" class="btn btn-buy">Купи</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="text-center mt-6">
-                    <button onclick="scrollLeft()" class="btn btn-scroll"><i class="fa-solid fa-arrow-left"></i> Назад</button>
-                    <button onclick="scrollRight()" class="btn btn-scroll">Напред <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </section>
         </section>
     </main>
 
