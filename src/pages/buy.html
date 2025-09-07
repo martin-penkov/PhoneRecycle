@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купи телефон - PhoneCycle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function scrollRight() {
+            const container = document.getElementById('phone-scroll-container');
+            const cardWidth = document.querySelector('.phone-card').offsetWidth + 33;
+            container.scrollBy({
+                left: cardWidth * 3,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollLeft() {
+            const container = document.getElementById('phone-scroll-container');
+            const cardWidth = document.querySelector('.phone-card').offsetWidth + 33;
+            container.scrollBy({
+                left: -cardWidth * 3,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-bar">
+            <nav>
+                <div class="logo">
+                    <i class="fa-solid fa-recycle"></i>
+                    PhoneCycle
+                </div>
+                <ul>
+                    <li><a href="home.html">Начало</a></li>
+                    <li><a href="buy.html">Купи</a></li>
+                    <li><a href="sell.html">Продай</a></li>
+                    <li><a href="repair.html">Ремонт</a></li>
+                    <li><a href="additional-info.html">Допълнителна информация</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="contact.html">Контакт</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Купи обновено устройство</h1>
+        </section>
+
+        <section class="content-section container">
+            <h2 class="text-center">Гарантирано качество на всяко устройство</h2>
+            <div class="section-title-line"></div>
+            <p class="text-center max-w-2xl mx-auto mb-10">Всеки телефон, който предлагаме, е преминал през строг процес на тестване и обновяване. За да ви помогнем да направите информиран избор, класифицираме нашите телефони в нива на състояние, които описват външния им вид.</p>
+
+            <div class="condition-grid">
+                <div class="condition-card">
+                    <h3>Перфектно състояние</h3>
+                    <p>Телефонът изглежда като нов. Няма видими драскотини или следи от употреба по корпуса и дисплея. Функционално е 100% изряден.</p>
+                </div>
+                <div class="condition-card">
+                    <h3>Много добро състояние</h3>
+                    <p>Телефонът има минимални, едва забележими драскотини, които се виждат само под определен ъгъл на светлина. Функционално е 100% изряден.</p>
+                </div>
+                <div class="condition-card">
+                    <h3>Добро състояние</h3>
+                    <p>Телефонът има видими драскотини по корпуса и/или дисплея, които не пречат на употребата. Въпреки козметичните забележки, функционално е 100% изряден.</p>
+                </div>
+            </div>
+
+            <div class="pricing-section">
+                <h2>Как определяме цените?</h2>
+                <div class="section-title-line mx-auto"></div>
+                <p>Цените на нашите обновени телефони се базират на няколко ключови фактора:</p>
+                <ul class="list-disc list-inside text-left mx-auto max-w-sm">
+                    <li><strong>Модел и възраст:</strong> По-новите модели обикновено имат по-висока цена.</li>
+                    <li><strong>Състояние:</strong> Нивото на състоянието е основен фактор. Телефоните в "Перфектно състояние" са по-скъпи от тези в "Добро състояние".</li>
+                    <li><strong>Капацитет на батерията:</strong> Всички наши телефони имат батерия над 85% капацитет, но този фактор също се взима предвид.</li>
+                    <li><strong>Пазарна стойност:</strong> Редовно проследяваме пазарните цени, за да ви предложим най-добрата и конкурентна оферта.</li>
+                </ul>
+                <p class="mt-4">Всяка цена отразява качеството, което предлагаме, и усилията, които влагаме в обновяването на всяко устройство.</p>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="btn">Вижте наличните телефони</a>
+            </div>
+
+            <section class="phone-gallery-section">
+                <h2 class="text-center">Налични телефони за продажба</h2>
+                <div class="section-title-line"></div>
+                
+                <div class="phone-scroll-wrapper">
+                    <div class="phone-scroll-container" id="phone-scroll-container">
+                        <div class="phone-card">
+                            <img src="https://i.ibb.co/6y45sKq/iphone-13-pro-max.png" alt="iPhone 13 Pro Max" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Apple iPhone 13 Pro Max</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition perfect">Перфектно</span></p>
+                                <p class="phone-description">Без никакви забележки по корпуса и дисплея. Батерия 95% здраве. Включен оригинален кабел за зареждане.</p>
+                                <p class="phone-price">Цена: <span class="price-value">1350 лв.</span></p>
+                                <a href="#" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-card">
+                            <img src="https://i.ibb.co/hV757g9/samsung-galaxy-s22.png" alt="Samsung Galaxy S22" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Samsung Galaxy S22</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition very-good">Много добро</span></p>
+                                <p class="phone-description">Едва забележими микро-драскотини по гърба. Дисплеят е перфектен. Батерия 90% здраве.</p>
+                                <p class="phone-price">Цена: <span class="price-value">980 лв.</span></p>
+                                <a href="#" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-card">
+                            <img src="https://i.ibb.co/R2t9W1q/pixel-6a.png" alt="Google Pixel 6a" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Google Pixel 6a</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition good">Добро</span></p>
+                                <p class="phone-description">Няколко видими драскотини по екрана, които не влияят на работата. Отлично функционално състояние.</p>
+                                <p class="phone-price">Цена: <span class="price-value">550 лв.</span></p>
+                                <a href="#" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-card">
+                            <img src="https://i.ibb.co/WcM5t58/iphone-12-mini.png" alt="iPhone 12 mini" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Apple iPhone 12 mini</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition perfect">Перфектно</span></p>
+                                <p class="phone-description">Изглежда като ново, без следи от употреба. Батерия 98% здраве.</p>
+                                <p class="phone-price">Цена: <span class="price-value">800 лв.</span></p>
+                                <a href="#" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-card">
+                            <img src="https://i.ibb.co/K2tL3y8/samsung-galaxy-a53.png" alt="Samsung Galaxy A53" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Samsung Galaxy A53</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition good">Добро</span></p>
+                                <p class="phone-description">Видими драскотини по гърба и рамката, но екранът е в добро състояние. Батерия 88% здраве.</p>
+                                <p class="phone-price">Цена: <span class="price-value">400 лв.</span></p>
+                                <a href="#" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+
+                        <div class="phone-card">
+                            <img src="https://i.ibb.co/x7R41m8/iphone-11-pro.png" alt="iPhone 11 Pro" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Apple iPhone 11 Pro</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition very-good">Много добро</span></p>
+                                <p class="phone-description">Много леки следи от употреба, почти незабележими. Отлична батерия.</p>
+                                <p class="phone-price">Цена: <span class="price-value">750 лв.</span></p>
+                                <a href="#" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+
+                        <div class="phone-card">
+                            <img src="https://i.ibb.co/x7R41m8/iphone-11-pro.png" alt="iPhone 11 Pro" class="phone-img">
+                            <div class="phone-details">
+                                <h3 class="phone-name">Apple iPhone 11 Pro</h3>
+                                <p class="phone-condition-label">Състояние: <span class="phone-condition very-good">Много добро</span></p>
+                                <p class="phone-description">Много леки следи от употреба, почти незабележими. Отлична батерия.</p>
+                                <p class="phone-price">Цена: <span class="price-value">750 лв.</span></p>
+                                <a href="#" class="btn btn-buy">Купи</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="text-center mt-6">
+                    <button onclick="scrollLeft()" class="btn btn-scroll"><i class="fa-solid fa-arrow-left"></i> Назад</button>
+                    <button onclick="scrollRight()" class="btn btn-scroll">Напред <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section contact-info">
+                <h4>Контакти</h4>
+                <p><i class="fa-solid fa-location-dot"></i>Левски, Варна 9000</p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="gmail.com@phonecycle.com">gmail@phonecycle.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+3594567890">0882734652</a></p>
+            </div>
+            <div class="footer-section quick-links">
+                <h4>Бързи връзки</h4>
+                <a href="buy.html">Разгледайте телефони</a>
+                <a href="sell.html">Продайте телефона си</a>
+                <a href="repair.html">Ремонтни услуги</a>
+                <a href="about.html">За нас</a>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Последвайте ни</h4>
+                <a href="#" class="fa-brands fa-facebook-f"></a>
+                <a href="#" class="fa-brands fa-instagram"></a>
+                <a href="#" class="fa-brands fa-twitter"></a>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 PhoneCycle. Всички права запазени.</p>
+        </div>
+    </footer>
+</body>
+</html>
