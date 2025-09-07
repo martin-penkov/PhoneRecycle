@@ -18,7 +18,10 @@
                     <i class="fa-solid fa-recycle"></i>
                     PhoneCycle
                 </div>
-                <ul>
+                <div class="hamburger-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="nav-links">
                     <li><a href="home.html">Начало</a></li>
                     <li><a href="buy.html">Купи</a></li>
                     <li><a href="sell.html">Продай</a></li>
@@ -106,5 +109,17 @@
             <p>&copy; 2025 PhoneCycle. Всички права запазени.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

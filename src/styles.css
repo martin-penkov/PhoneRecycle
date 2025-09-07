@@ -106,7 +106,7 @@ nav ul li a:hover {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-/* ===== CONTENT SECTIONS ===== */
+/* CONTENT SECTIONS */
 .content-section, .about-us, .repair-section, .form-section, .map-section, .team-section, .phone-gallery-section {
     padding: 60px 0;
 }
@@ -168,7 +168,7 @@ nav ul li a:hover {
     margin-right: 10px;
 }
 
-/* ===== GRIDS & CARDS ===== */
+/* GRIDS */
 .condition-grid, .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -177,7 +177,6 @@ nav ul li a:hover {
 }
 
 .features {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 60px 0;
     text-align: center;
     margin-top: 0;
@@ -214,7 +213,6 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-/* ===== FORMS & CONTACT ===== */
 .form-container {
     background-color: white;
     max-width: 700px;
@@ -333,7 +331,6 @@ textarea {
     margin-top: 20px;
 }
 
-/* ===== SERVICES TABLE ===== */
 .services-table {
     width: 100%;
     border-collapse: collapse;
@@ -403,7 +400,6 @@ textarea {
     margin-top: 40px;
 }
 
-/* ===== FAQ SECTION ===== */
 .faq-item {
     border-bottom: 1px solid #ddd;
     padding: 20px 0;
@@ -438,7 +434,6 @@ textarea {
     transform: rotate(180deg);
 }
 
-/* ===== REPAIR STEPS SECTION ===== */
 .repair-info {
     display: flex;
     flex-direction: column;
@@ -460,7 +455,6 @@ textarea {
     margin-bottom: 5px;
 }
 
-/* ===== ABOUT US SECTION (MISSION & VISION) ===== */
 .text-block {
     max-width: 800px;
     margin: auto;
@@ -537,7 +531,6 @@ textarea {
     border: none;
 }
 
-/* ===== FOOTER ===== */
 footer {
     background: var(--dark-color);
     color: var(--light-color);
@@ -593,7 +586,6 @@ footer {
     margin-top: 20px;
 }
 
-/* --- Added Phone Gallery Styles --- */
 .phone-gallery-section {
     background-color: white;
 }
@@ -796,6 +788,13 @@ footer {
     font-size: 1.25rem;
 }
 
+.hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--light-color);
+}
+
 @media (max-width: 1024px) {
     .phone-scroll-container .phone-card {
         width: calc(33.33% - 22px);
@@ -803,10 +802,32 @@ footer {
 }
 
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     nav ul {
         display: none;
         flex-direction: column;
         width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+
+    nav .logo {
+        margin-bottom: 15px;
     }
     
     .page-header h1, .hero-content h1 {
