@@ -112,43 +112,68 @@
             border-radius: 2px;
         }
         
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+        /* СТИЛОВЕ ЗА ТАБЛИЦАТА */
+        .services-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden; /* Важно за заоблените ъгли */
+            background-color: white;
+        }
+
+        .services-table thead {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        .services-table th,
+        .services-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+            border-right: 1px solid #e0e0e0; /* Вертикална линия */
+        }
+
+        /* Премахване на последната вертикална линия в реда */
+        .services-table th:last-child,
+        .services-table td:last-child {
+            border-right: none;
         }
         
-        .service-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .services-table th {
+            font-weight: 600;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        .services-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
 
-        .service-card i {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
+        .services-table tbody tr:hover {
+            background-color: #f0fdf4; /* Light green on hover */
         }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            color: var(--dark-color);
-            margin-bottom: 10px;
-        }
-
-        .price-range {
-            font-size: 1.25rem;
+        
+        .services-table td:first-child {
             font-weight: bold;
             color: var(--dark-color);
-            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            min-width: 250px; /* Осигурява място за иконата и текста */
+        }
+        
+        .services-table td i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .services-table .price-col {
+            font-weight: bold;
+            color: var(--dark-color);
+            white-space: nowrap;
         }
 
         .disclaimer {
@@ -246,6 +271,12 @@
                 text-align: center;
                 margin: 10px 0;
             }
+            .services-table th, .services-table td {
+                padding: 12px 8px;
+            }
+             .services-table td i {
+                margin-right: 8px;
+            }
         }
     </style>
 </head>
@@ -280,50 +311,49 @@
             <div class="section-title-line"></div>
             <p class="text-center max-w-2xl mx-auto mb-10">Нашите техници са специализирани в широк спектър от ремонти на смартфони. Ето списък с някои от най-често срещаните услуги, които предлагаме, заедно с ориентировъчни цени. За точна оферта, моля, свържете се с нас.</p>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <h3>Смяна на дисплей</h3>
-                    <p>Ремонт на счупени или неработещи екрани. Използваме висококачествени резервни части, за да възстановим визията на вашето устройство.</p>
-                    <div class="price-range">От 80 лв. до 300 лв.</div>
-                </div>
-
-                <div class="service-card">
-                    <i class="fa-solid fa-battery-full"></i>
-                    <h3>Смяна на батерия</h3>
-                    <p>Ако батерията ви се изтощава бързо или телефонът ви се изключва неочаквано, ние можем да я заменим с нова.</p>
-                    <div class="price-range">От 40 лв. до 120 лв.</div>
-                </div>
-
-                <div class="service-card">
-                    <i class="fa-solid fa-microchip"></i>
-                    <h3>Ремонт на порт за зареждане</h3>
-                    <p>Поправка на повредени портове за зареждане, които пречат на телефона да се зареди или да се свърже с компютър.</p>
-                    <div class="price-range">От 50 лв. до 150 лв.</div>
-                </div>
-
-                <div class="service-card">
-                    <i class="fa-solid fa-camera"></i>
-                    <h3>Ремонт на камера</h3>
-                    <p>Ремонтираме или подменяме основни, предни и други камери. Връщаме ви възможността да заснемате перфектни снимки.</p>
-                    <div class="price-range">От 60 лв. до 200 лв.</div>
-                </div>
-
-                <div class="service-card">
-                    <i class="fa-solid fa-volume-up"></i>
-                    <h3>Ремонт на слушалка/микрофон</h3>
-                    <p>Поправка на проблеми с аудиото, като например слабо или липсващо аудио по време на разговори.</p>
-                    <div class="price-range">От 30 лв. до 100 лв.</div>
-                </div>
-
-                <div class="service-card">
-                    <i class="fa-solid fa-wrench"></i>
-                    <h3>Други ремонти</h3>
-                    <p>Предлагаме и други видове ремонти, включително поправка на бутони, проблеми със софтуера и водни повреди.</p>
-                    <div class="price-range">По договаряне</div>
-                </div>
+            <div class="overflow-x-auto">
+                <table class="services-table">
+                    <thead>
+                        <tr>
+                            <th>Услуга</th>
+                            <th>Описание</th>
+                            <th>Ориентировъчна цена</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fa-solid fa-mobile-screen-button"></i>Смяна на дисплей</td>
+                            <td>Ремонт на счупени екрани. Използваме висококачествени резервни части, за да възстановим визията на вашето устройство.</td>
+                            <td class="price-col">От 80 лв. до 300 лв.</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-battery-full"></i>Смяна на батерия</td>
+                            <td>Ако батерията ви се изтощава бързо или телефонът ви се изключва неочаквано, ние можем да я заменим с нова.</td>
+                            <td class="price-col">От 40 лв. до 120 лв.</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-microchip"></i>Ремонт на порт за зареждане</td>
+                            <td>Поправка на повредени портове за зареждане, които пречат на телефона да се зареди или да се свърже с компютър.</td>
+                            <td class="price-col">От 50 лв. до 150 лв.</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-camera"></i>Ремонт на камера</td>
+                            <td>Ремонтираме или подменяме основни, предни и други камери. Връщаме ви възможността да заснемате перфектни снимки.</td>
+                            <td class="price-col">От 60 лв. до 200 лв.</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-volume-up"></i>Ремонт на слушалка/микрофон</td>
+                            <td>Поправка на проблеми с аудиото, като например слабо или липсващо аудио по време на разговори.</td>
+                            <td class="price-col">От 30 лв. до 100 лв.</td>
+                        </tr>
+                         <tr>
+                            <td><i class="fa-solid fa-wrench"></i>Други ремонти</td>
+                            <td>Предлагаме и други видове ремонти, включително поправка на бутони, проблеми със софтуера и водни повреди.</td>
+                            <td class="price-col">По договаряне</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
             <div class="disclaimer">
                 <p><strong>Забележка:</strong> Посочените цени са ориентировъчни и зависят от модела на телефона и конкретния проблем. За точна цена, моля, попълнете нашата форма за контакт.</p>
             </div>
